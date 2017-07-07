@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+   <!-- HEADER MENU 2 hours -->
+   <a href="#" class="menuButton"></a>
+    <ul class="headerMenu" id="responsive">
+        <li><a class="scroll" href="#info">Личная информация</a></li>
+        <li><a class="scroll" href="#exp">Опыт</a></li>
+        <li><a class="scroll" href="#js">JavaScript</a></li>
+        <li><a class="scroll" href="#bio">О себе</a></li>
+    </ul>
+   <!-- HEADER MENU END-->
+   
+   <!-- WRAPPER CONTAINER 3 hours-->
+    <div class="container">
+        <h1>Анкета</h1>
+        <!-- FORM START -->
+        <form action="toServer.php" method="post" class="mainForm">
+            <!-- FIRST HEADER -->
+            <img src="img/info.png" alt="infoicon" id="info" class="icon">
+            <h4>Личная информация</h4>
+            <!-- FIRST HEADER END-->
+            
+            <input type="text" name="name" id="name" placeholder="ФИО">
+            <select name="date" id="date">
+                <option>Год рождения</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+            </select>
+            <input type="text" name="place" id="place" placeholder="Место проживания">
+            <input type="text" name="slype" id="skype" placeholder="Skype">
+            <input type="text" name="email" id="email" placeholder="E-mail">
+            
+            <!-- SECOND HEADER -->
+            <img src="img/exp.png" alt="exp" id="exp" class="icon">
+            <h4>Расскажите о своем опыте</h4>
+            <!-- SECOND HEADER END -->
+            
+            <!-- CHECKBOX BLOCK -->
+            <div class="checkboxes">
+                <div class="col">
+                    <label class="checkbox">
+                        <input type="checkbox" value="БЭМ/OOCSS" name="oocss">
+                        <span class="boxStyle"></span>
+                        БЭМ/OOCSS
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Stylus/LESS/SASS" name="preproc">
+                        <span class="boxStyle"></span>
+                        Stylus/LESS/SASS
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Расботаю с SVG" name="oocss">
+                        <span class="boxStyle"></span>
+                        Расботаю с SVG
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="checkbox">
+                        <input type="checkbox" value="БЭМ/OOCSS" name="oocss">
+                        <span class="boxStyle"></span>
+                        БЭМ/OOCSS
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Stylus/LESS/SASS" name="preproc">
+                        <span class="boxStyle"></span>
+                        Stylus/LESS/SASS
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Расботаю с SVG" name="oocss">
+                        <span class="boxStyle"></span>
+                        Расботаю с SVG
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="checkbox">
+                        <input type="checkbox" value="БЭМ/OOCSS" name="oocss">
+                        <span class="boxStyle"></span>
+                        БЭМ/OOCSS
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Stylus/LESS/SASS" name="preproc">
+                        <span class="boxStyle"></span>
+                        Stylus/LESS/SASS
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Расботаю с SVG" name="oocss">
+                        <span class="boxStyle"></span>
+                        Расботаю с SVG
+                    </label>
+                </div>
+            </div>
+            <!-- CHECKBOX BLOCK END-->
+            
+            <!-- THIRD HEADER -->
+            <img src="img/js.png" alt="js" id="js" class="icon">
+            <h4>Уровень владения JavaScript</h4>
+            <!-- THIRD HEADER END -->
+            
+            <!-- SLIDER -->
+            <div class="sliderValues">
+                <label class="sliderValue">Не владею</label>
+                <label class="sliderValue">Использую готовые<br> решения</label>
+                <label class="sliderValue">Использую готовые решения и умею и переделывать</label>
+                <label class="sliderValue last">Пишу сложный JS с нуля</label>
+            </div>
+            <input type="range" class="slider" min="0" max="100" value="0" step="26">
+            <!-- SLIDER END-->
+            
+            <!-- FORTH HEADER -->
+            <img src="img/about.png" alt="js" id="bio" class="icon">
+            <h4>Расскажите о себе</h4>
+            <center>Напишите несколько предложений, чем привлекла наша вакансия <br>и что вы ожидаете от работы у нас.</center>
+            <!-- FORTH HEADER END -->
+            
+            <!-- TEXTAREA 2 min -->
+            <textarea name="about" cols="30" rows="10" placeholder="Понравилась тем, что..."></textarea>
+            <!-- TEXTAREA END -->
+            
+            <!-- SUBMIT min -->
+            <input type="submit" value="Готово">
+            <!-- SUBMIT END -->
+        </form>
+        <!-- FORM END -->
+    </div>
+   <!-- WRAPPER CONTAINER END-->
+   
+   
+   
+   
+   
+   <!-- LINKS -->
+   <script src="js/jquery-3.2.1.min.js"></script>
+   <script src="js/main.js"></script>
+</body>
+</html>
