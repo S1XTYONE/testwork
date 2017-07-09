@@ -1,6 +1,10 @@
 
 @import "_settings.sass"
 
+*
+    margin: 0
+    padding: 0
+
 html,body
     margin: 0
     padding: 0
@@ -14,10 +18,13 @@ html,body
 .headerMenu
     display: flex
     justify-content: center
+    align-items: center
+    padding: 0
     border-bottom: 1px solid #d9d9d9
+    height: 80px
     li
         display: inline-block
-        padding: 30px 75px 30px 0
+        padding-right: 75px
         &:last-child
             padding-right: 0
         a
@@ -40,20 +47,31 @@ html,body
     .menuButton
         display: block
     .headerMenu
+        height: 100%
         -webkit-flex-flow: column wrap
         flex-flow: column wrap
-        justify-content: space-around
+        justify-content: space-between
         display: none
         padding: 0
     .headerMenu li
         text-align: center
         padding: 30px 0
+        
+    .container
+        padding: 0 10px
+        
+    .small
+        display: block !important
+
+    .large
+        display: none
+        
             
 /* HEADER MUNU END */
 
 /* WRAPPER CONTAINER */
 .container
-    width: 768px
+    max-width: 768px
     margin: 0 auto
     text-align: center
     padding-bottom: 70px
@@ -65,11 +83,13 @@ html,body
 h1
     font-size: 70px
     font-weight: 100
-    padding: 50px 0
+    padding-top: 110px
     
 h4
     font-size: 30px
     font-weight: 300
+    margin-top: 21px
+    margin-bottom: 46px
     
 /* HEADERS END */
     
@@ -85,33 +105,74 @@ h4
     height: 47px
     margin: 0 auto
     display: block
-    margin-top: 50px   //icon styles
+    margin-top: 59px //icon styles
     
-select
+.select2
+    &:after
+        transform: rotate(180deg)
+    
+.select
     border: 1px solid #e5e5e5
     border-radius: 5px
-    padding: 20px 80px
-    width: 318px
+    padding: 16px 80px
+    width: 159px
     margin: 0 auto
     font-size: 23px
     color: $primary-textcolor
     margin-bottom: 25px
     text-align: center
-    &:focus
-        outline: none
-    option
-        background-color: transparent
-        border: 0
+    text-align-last: center
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    position: relative
+    display: block
+    &:after
+        content: ' '
+        background-image: url(../img/selectArrow.png)
+        position: absolute
+        width: 14px
+        height: 8px
+        top: 28px
+        right: 25px
+    span
+        color: $primary-textcolor
+        &:hover
+            cursor: pointer
+    ul
+        display: none
+        background: #fff
+        box-shadow: 0 0 10px rgba(0,0,0,0.3)
         text-align: center
-        background-image: url(images/option.png)  //select styles
+        width: 318px
+        position: absolute
+        top: 105%
+        left: 0
+        list-style: none
+        margin: 0
+        padding: 0
+        z-index: 10
+        border-radius: 5px
+        li
+            font-size: 20px
+            column-rule: $link-color
+            display: block
+            color: $link-color
+            padding: 11px 
+            line-height: 22px
+            &:hover
+                color: $primary-textcolor
+                background-color: #e5e5e5
+                cursor: pointer
+        
 
 input[type=text]
     border: 1px solid #e5e5e5
     color: $primary-textcolor
     border-radius: 5px
-    padding: 20px 80px
-    margin-left: 20%
-    margin-right: 20%
+    padding: 16px 0
+    margin-left: 16.5%
+    margin-right: 16.5%
     font-size: 23px
     margin-bottom: 25px
     text-align: center
@@ -142,7 +203,14 @@ input[type=text]
     display: flex
     flex-direction: row
     justify-content: space-between
+    flex-wrap: wrap
     margin-bottom: 50px
+    
+.col
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-bottom: 10px
     
 .checkbox
     cursor: pointer
@@ -182,6 +250,7 @@ input[type=range]
     background-color: transparent
     -webkit-appearance: none
     width: 100%
+    margin-bottom: 23px
     &::-webkit-slider-thumb
         -webkit-appearance: none
         background-image: url(../img/slider.png)
@@ -238,15 +307,24 @@ input[type=range]
             display: block
         
 /* range input styles end */
-        
-textarea
+
+textarea.small
+    display: none
     resize: none
-    margin: 40px auto
+    margin: 33px auto
     padding: 20px
     font-size: 20px
-    width: 520px
     border: 1px solid #e8e8e8
-    border-radius: 3px          
+    border-radius: 3px 
+        
+textarea.large
+    resize: none
+    margin: 33px auto
+    padding: 20px
+    font-size: 20px
+    border: 1px solid #e8e8e8
+    border-radius: 3px 
+    width: 520px
     &:focus
         outline: none            //'about' textarea styles
     
@@ -257,7 +335,7 @@ input[type=submit]
     padding: 13px 33px
     width: 115px
     cursor: pointer
-    margin: 0 auto
+    margin: 40px auto
     border: none
     border-radius: 5px
     &:hover
@@ -266,4 +344,7 @@ input[type=submit]
         outline: none           //'Готово' button styles
     
 /* MAIN BLOCK/FORM END*/
-    
+
+
+lastHeader
+    margin-bottom: 38px
