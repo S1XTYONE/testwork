@@ -75,8 +75,8 @@ fieldset label { position: absolute; top: 25px; margin-left: auto; margin-right:
 .ui-widget-header { background: #d7b3f4; background: -moz-linear-gradient(left, #d7b3f4 0%, #555280 100%); background: -webkit-linear-gradient(left, #d7b3f4 0%, #555280 100%); background: linear-gradient(to right, #d7b3f4 0%, #555280 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7b3f4', endColorstr='#555280', GradientType=1); height: 15px; left: 0px; top: 0px; position: absolute; }
 
 .sliderValues { display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; }
-.sliderValues .last { text-align: right !important; }
-.sliderValues .sliderValue { width: 1%; font-size: 14px; font-weight: 300; text-align: left; margin-bottom: 15px; }
+.sliderValues .sliderValue { width: 0; font-size: 14px; font-weight: 300; overflow: visible; text-align: left; margin-bottom: 15px; }
+.sliderValues .sliderValue p { width: 130px; }
 .sliderValues .sliderValue:after { content: " "; height: 19px; width: 1px; border-left: 1px dotted #b3b3b3; margin-top: 8px; display: block; }
 
 .static { float: left; margin-top: 12px; margin-left: -10px; display: none; }
@@ -103,4 +103,6 @@ lastHeader { margin-bottom: 38px; }
   .small { display: block !important; }
   .large { display: none; }
   .select { width: auto; }
-  fieldset input { width: 100%; margin-left: 0; margin-right: 0; } }
+  fieldset input { width: 100%; margin-left: 0; margin-right: 0; }
+  .sliderValues .sliderValue { width: 100%; overflow: hidden; }
+  .sliderValues .sliderValue p { width: 100%; } }
