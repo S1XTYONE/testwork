@@ -13,6 +13,9 @@ html,body
 .displayflex
     display: flex !important
     transition: 0.5s ease-in-out
+    
+.db
+    display: block
 
 /* HEADER MUNU */
     
@@ -295,7 +298,14 @@ fieldset
             margin-top: 8px
             display: block
             
-
+.static
+    float: left
+    margin-top: 12px
+    margin-left: -10px
+    display: none
+    
+.range[value="0"] .static
+    display: block
         
 /* range input styles end */
 
@@ -323,7 +333,7 @@ input[type=submit]
     background-color: $link-color
     color: #fff
     font-size: 16px
-    padding: 13px 33px
+    padding: 13px 33px !important
     width: 115px
     cursor: pointer
     margin: 40px auto

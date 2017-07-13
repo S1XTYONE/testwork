@@ -5,6 +5,8 @@ html, body { margin: 0; padding: 0; font-family: Roboto, sans-serif; }
 
 .displayflex { display: flex !important; transition: 0.5s ease-in-out; }
 
+.db { display: block; }
+
 /* HEADER MUNU */
 .headerMenu { display: flex; justify-content: center; align-items: center; padding: 0; border-bottom: 1px solid #d9d9d9; height: 80px; }
 .headerMenu li { display: inline-block; padding-right: 75px; }
@@ -77,13 +79,17 @@ fieldset label { position: absolute; top: 25px; margin-left: auto; margin-right:
 .sliderValues .sliderValue { width: 1%; font-size: 14px; font-weight: 300; text-align: left; margin-bottom: 15px; }
 .sliderValues .sliderValue:after { content: " "; height: 19px; width: 1px; border-left: 1px dotted #b3b3b3; margin-top: 8px; display: block; }
 
+.static { float: left; margin-top: 12px; margin-left: -10px; display: none; }
+
+.range[value="0"] .static { display: block; }
+
 /* range input styles end */
 textarea.small { display: none; resize: none; margin: 33px auto; padding: 20px; font-size: 20px; border: 1px solid #e8e8e8; border-radius: 3px; }
 
 textarea.large { resize: none; margin: 33px auto; padding: 20px; font-size: 20px; border: 1px solid #e8e8e8; border-radius: 3px; width: 520px; }
 textarea.large:focus { outline: none; }
 
-input[type=submit] { background-color: #435993; color: #fff; font-size: 16px; padding: 13px 33px; width: 115px; cursor: pointer; margin: 40px auto; border: none; border-radius: 5px; }
+input[type=submit] { background-color: #435993; color: #fff; font-size: 16px; padding: 13px 33px !important; width: 115px; cursor: pointer; margin: 40px auto; border: none; border-radius: 5px; }
 input[type=submit]:hover { background-color: #4b64a3; }
 input[type=submit]:focus { outline: none; }
 

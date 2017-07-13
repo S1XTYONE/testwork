@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    var value = $('.range').attr("value");
+    if(value === "0"){
+        $('.static').addClass('db');
+    }
   $("a.scroll").click(function() {
     var elementClick = $(this).attr("href")
     var destination = $(elementClick).offset().top;
