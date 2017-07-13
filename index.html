@@ -21,17 +21,19 @@
     <div class="container">
         <h1>Анкета</h1>
         <!-- FORM START -->
-        <form action="toServer.php" method="post" class="mainForm">
+        <form action="toServer.php" method="post" class="mainForm form-css">
             <!-- FIRST HEADER -->
             <img src="img/info.png" alt="infoicon" id="info" class="icon">
             <h4>Личная информация</h4>
             <!-- FIRST HEADER END-->
             
-            <input type="text" name="name" value="Рузиев Ислам" id="name" placeholder="ФИО">
+            <fieldset>
+              <input id="firstName" name="name" value="Рузиев Ислам" type="text" autocomplete="off" required>
+              <label for="firstName">ФИО</label>
+            </fieldset>
             <div class="select">
                 <select name="date" id="date">
-                    <option>2000</option>
-                    <option value="2000">2000</option>
+                    <option value="2000" selected>2000</option>
                     <option value="1999">1999</option>
                     <option value="1998">1998</option>
                     <option value="1997">1997</option>
@@ -40,9 +42,18 @@
                     <option value="1994">1994</option>
                 </select>
             </div>
-            <input type="text" name="place" value="Казахстан, Алматы ул.Исиналиева" id="place" placeholder="Место проживания">
-            <input type="text" name="slype" value="racer3228" id="skype" placeholder="Skype">
-            <input type="text" name="email" value="racer3229@gmail.com" id="email" placeholder="E-mail">
+            <fieldset>
+              <input type="text" name="place" value="Казахстан, Алматы ул.Исиналиева" id="place" autocomplete="off" required>
+              <label for="place">Место проживания</label>
+            </fieldset>
+            <fieldset>
+              <input type="text" name="slype" value="racer3228" id="skype" autocomplete="off" required>
+              <label for="skype">Skype</label>
+            </fieldset>
+            <fieldset>
+              <input type="text" name="email" value="racer3229@gmail.com" id="email" autocomplete="off" required>
+              <label for="email">E-mail</label>
+            </fieldset>
             
             <!-- SECOND HEADER -->
             <img src="img/exp.png" alt="exp" id="exp" class="icon">
@@ -117,13 +128,18 @@
                 <label class="sliderValue">Использую готовые решения и умею и переделывать</label>
                 <label class="sliderValue last">Пишу сложный JS с нуля</label>
             </div>
-            <input type="range" class="slider" min="0" max="100" value="52" step="26">
+        
+            <div class="block">
+              <div class="slider"></div>
+              <input type="hidden" class="range" value="2" />
+            </div>
+            
             <!-- SLIDER END-->
             
             <!-- FORTH HEADER -->
             <img src="img/about.png" alt="js" id="bio" class="icon">
             <h4 class="lastHeader">Расскажите о себе</h4>
-            <center>Напишите несколько предложений, чем привлекла наша вакансия <br>и что вы ожидаете от работы у нас.</center>
+            <p class="subHeader">Напишите несколько предложений, чем привлекла наша вакансия <br>и что вы ожидаете от работы у нас.</p>
             <!-- FORTH HEADER END -->
             
             <!-- TEXTAREA 2 min -->
@@ -147,5 +163,6 @@
    <!-- LINKS -->
    <script src="js/jquery-3.2.1.min.js"></script>
    <script src="js/main.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 </html>

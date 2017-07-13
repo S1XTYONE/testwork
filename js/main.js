@@ -46,12 +46,30 @@ $(document).ready(function() {
     })
 
     $('.select span, .select ul li').click(function(e){
-        e.preventDefault();
-        $(".select").toggleClass('select2');
-    });    
+            e.preventDefault();
+            $(".select").toggleClass('select2');
+        });    
 
-    // On click out hide the UL
-    $(document).on('click', function() {
-      $('.select ul').fadeOut();
-    });
+        // On click out hide the UL
+        $(document).on('click', function() {
+          $('.select ul').fadeOut();
+        });
+
+        $('.slider').slider({
+          animate: true,
+          range: 'min',
+          value: 2,
+          min: 0,
+          max: 3,
+          step: 1,
+
+          slide: function(event, ui) {
+            $('input.range').val(ui.value);
+          },
+
+          change: function(event, ui) {
+            $('input.range').val(ui.value);
+          }
+
+        });
 });
